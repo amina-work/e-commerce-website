@@ -97,16 +97,74 @@ body {
 .nav__profile .avatar img:hover {
   border: 2px solid hsl(26deg, 100%, 55%);
 }
-.nav__profile:hover .avatar > ul {
+.nav__profile:hover > ul {
   visibility: visible;
   opacity: 1;
 }
-.nav__profile ul {
+.nav__profile .showup {
   position: absolute;
-  top: 140%;
-  right: 0;
+  top: 110px;
+  width: 360px;
+  background-color: hsl(0deg, 0%, 100%);
+  right: 68px;
   display: flex;
+  flex-direction: column;
+  box-shadow: 3px 7px 7px rgba(0, 0, 0, 0.1);
+  visibility: hidden;
   opacity: 0;
+  transition: all 400ms ease-in-out;
+  border-radius: 10px;
+}
+.nav__profile .showup .title {
+  display: block;
+  width: 100%;
+  font-weight: 700;
+  padding: 27px 0;
+  position: relative;
+}
+.nav__profile .showup .title p {
+  padding-left: 24px;
+}
+.nav__profile .showup .title::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  border-bottom: 1px solid hsl(219deg, 9%, 45%);
+  width: 100%;
+}
+.nav__profile .showup .grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 17px;
+  margin: 24px;
+}
+.nav__profile .showup .grid .pic {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  width: 50px;
+}
+.nav__profile .showup .grid .pic img {
+  border-radius: 5px;
+  width: 100%;
+}
+.nav__profile .showup .grid .price {
+  grid-column-start: 2;
+  grid-column-end: 7;
+}
+.nav__profile .showup .grid .price p {
+  font-size: 14px;
+  color: hsl(219deg, 9%, 45%);
+}
+.nav__profile .showup .grid .price p strong {
+  color: hsl(0deg, 0%, 0%);
+}
+.nav__profile .showup .grid .trash {
+  grid-column-start: 7;
+  grid-column-end: 8;
+  margin-top: 18px;
+}
+.nav__profile .showup .grid .trash img {
+  width: 15px;
 }
 .nav__profile .icon {
   cursor: pointer;

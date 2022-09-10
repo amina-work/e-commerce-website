@@ -107,17 +107,76 @@ body{
                 }
             }
         }
-        &:hover .avatar > ul{
+        &:hover > ul{
             visibility: visible;
             opacity: 1;
         }
 
-        ul{
+        .showup{
             position: absolute;
-            top: 140%;
-            right: 0;
+            top: 110px;
+            width: 360px;
+            background-color: $white;
+            right: 68px;
             display: flex;
+            flex-direction: column;
+            box-shadow: 3px 7px 7px rgba(0, 0, 0, 0.1);
+            visibility: hidden;
             opacity: 0;
+            transition: all 400ms ease-in-out;
+            border-radius: 10px;
+
+            .title{
+                display: block;
+                width: 100%;
+                font-weight: 700;
+                padding: 27px 0;
+                position: relative;
+                p{
+                    padding-left: 24px;
+                }
+                &::before{
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    border-bottom: 1px solid $darkGrayishBlue;
+                    width: 100%;
+                }
+            }
+            .grid{
+                display: grid;
+                grid-template-columns: repeat(7, 1fr);
+                gap: 17px;
+                margin: 24px;
+                .pic{
+                    grid-column-start: 1;
+                    grid-column-end: 2;
+                    width: 50px;
+                    img{
+                        border-radius: 5px;
+                        width: 100%;
+                    }
+                }
+                .price{
+                    grid-column-start: 2;
+                    grid-column-end: 7;
+                    p{
+                        font-size: 14px;
+                        color: $darkGrayishBlue;
+                        strong{
+                            color: $black;
+                        }
+                    }
+                }
+                .trash{
+                    grid-column-start: 7;
+                    grid-column-end: 8;
+                    margin-top: 18px;
+                    img{
+                        width: 15px;
+                    }
+                }
+            }
         }
 
         .icon{  
