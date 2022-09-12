@@ -34,6 +34,9 @@ header::before {
 header .logo {
   margin-right: 22px;
 }
+header button {
+  display: none;
+}
 header .menu {
   display: flex;
   gap: 34px;
@@ -59,9 +62,6 @@ header .menu a:hover {
 }
 header .menu a:hover::before {
   opacity: 1;
-}
-header .hamburger-logo-group {
-  display: none;
 }
 header .cart-avatar-group {
   display: flex;
@@ -157,4 +157,9 @@ header .cart-avatar-group .avatar:hover {
   border-radius: 50%;
 }
 
-/* ============================== MEDIA QUERIES ============================== *//*# sourceMappingURL=styles.css.map */
+/* ============================== MEDIA QUERIES ============================== */
+@media screen and (max-width: 1020px) {
+  .menu a {
+    display: none;
+  }
+}/*# sourceMappingURL=styles.css.map */

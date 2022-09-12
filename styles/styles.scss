@@ -17,6 +17,8 @@ body{
     overflow-x: hidden;
 }
 
+
+
 /* ============================== NAVBAR ============================== */
 header{
     display: flex;
@@ -40,9 +42,14 @@ header{
         margin-right: 22px;
     }
 
+    button{
+        display: none;
+    }
+
     .menu{
         display: flex;
         gap: 34px;
+
         a{
             text-decoration: none;
             color: $darkGrayishBlue;
@@ -66,10 +73,6 @@ header{
                 }
             }
         }
-    }
-
-    .hamburger-logo-group{
-        display: none;
     }
 
     .cart-avatar-group{
@@ -179,8 +182,10 @@ header{
 
 
 
-
 /* ============================== MEDIA QUERIES ============================== */
 @media screen and (max-width: 1020px) {
+    .menu a{
+        display: none;
+    }
 
 }
