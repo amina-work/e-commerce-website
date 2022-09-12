@@ -8,12 +8,10 @@ $darkGrayishBlue: hsl(219, 9%, 45%);
 $grayishBlue: hsl(220, 14%, 75%);
 $lightGrayishBlue: hsl(223, 64%, 98%);
 $white: hsl(0, 0%, 100%);
-$black: hsl(0, 0%, 0%);
-
-//Typography
-$bodyFontSize: 16px;
-$fontFamily: 'Kumbh Sans', sans-serif;
+$black: hsl(0, 0%, 0%, 0.75);
 
 //widths
-$longWidth: 74%;
+$longWidth: 77%; //1440 - 328 = 1112 ==> 77%
 $middleWidth: 88%;
+
+

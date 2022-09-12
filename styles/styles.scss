@@ -1,212 +1,186 @@
 @import "variables"; //variables file always upfront
 
+//1440 width x 900 height
 
 /* ============================== GENERAL ============================== */
 *{
     margin: 0;
     padding: 0;
-    appearance: 0;
-    border: 0;
-    outline: 0;
-    list-style: none;
-    text-decoration: none;
     box-sizing: border-box;
 }
 
 body{
     background-color: $white;
-    font-size: $bodyFontSize;
-    font-family: $fontFamily;
-    line-height: 1.6;
+    font-size: 16px;
+    font-family: 'Kumbh Sans', sans-serif;
     color: $black;
+    overflow-x: hidden;
 }
-
-.container{
-    width: $longWidth;
-    max-width: 1800px;
-    margin-inline: auto;
-}
-
 
 /* ============================== NAVBAR ============================== */
-.nav{
-    width: 100vw;
-    height: 112px;
-    position: fixed;
-    top: 0;
-    z-index: 10;
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    margin: auto; //centers header (?)
+    width: $longWidth;
     position: relative;
+
     &::before{
         content: '';
         position: absolute;
         bottom: 0;
-        left: 13%; //to be changed
         border-bottom: 1px solid $darkGrayishBlue;
-        width: $longWidth; //to be changed
+        width: 94%;
     }
 
-    button{
-        display: none;
+    .logo{
+        margin-right: 22px;
     }
 
-    &__logo{
-        margin-right: 26px;
-    }
-
-    &__container{
-        height: 100%;
+    .menu{
         display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    &__links{
-        display: flex;
-        align-items: left;
-        gap: 33px;
-
+        gap: 34px;
         a{
+            text-decoration: none;
+            color: $darkGrayishBlue;
             position: relative;
-            color: $darkGrayishBlue;  
 
             &::before{
                 content: '';
-                display: block;
                 position: absolute;
-                height: 4px;
+                display: block;
+                bottom: -2.5rem;
                 left: 0;
                 right: 0;
-                bottom: -46px;
-                background-color: $orange;
-                transition: opacity 300ms ease-in-out;
+                border-bottom: 4px solid $orange;
                 opacity: 0;
+                transition: opacity 400ms ease-in-out;
             }
-
             &:hover{
-                color: $black;
+                color: $veryDarkBlue;
                 &::before{
                     opacity: 1;
                 }
-        }
-    }
-    }
-
-    &__profile{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 2rem;
-        .avatar{
-            img{
-                width: 2.5rem;
-                height: 2.5rem;
-                border-radius: 50%;
-                overflow: hidden;
-                &:hover{
-                    border: 2px solid $orange;
-                }
             }
         }
-        &:hover > ul{
-            visibility: visible;
-            opacity: 1;
+    }
+
+    .hamburger-logo-group{
+        display: none;
+    }
+
+    .cart-avatar-group{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2.2rem;
+
+        .btnCart{
+            cursor: pointer;
+            position: relative;
+            &:hover {
+                .hover-items{
+                    opacity: 1;
+                }
+
+                .btnCart__count{
+                    opacity: 1;
+                }
+            }
+            &__count{
+                position: absolute;
+                font-size: 8px;
+                font-weight: 700;
+                color: $white;
+                background-color: $orange;
+                padding: 2px 8px;
+                border-radius: 50%;
+                left: 12px;
+                top: -6px;
+                opacity: 0;
+            }
         }
 
-        .showup{
+        .hover-items{
             position: absolute;
-            top: 110px;
-            width: 360px;
             background-color: $white;
-            right: 68px;
-            display: flex;
-            flex-direction: column;
-            box-shadow: 3px 7px 7px rgba(0, 0, 0, 0.1);
-            visibility: hidden;
+            box-shadow: 1px 7px 7px rgba(0, 0, 0, 0.2);
+            border-radius: 5%;
+            top: 3rem;
+            right: -9.5rem;
             opacity: 0;
-            transition: all 400ms ease-in-out;
-            border-radius: 10px;
 
-            .title{
-                display: block;
-                width: 100%;
-                font-weight: 700;
-                padding: 27px 0;
+            h5{
+                color: $veryDarkBlue;
+                font-size: 14px;
+                padding: 24px;
                 position: relative;
-                p{
-                    padding-left: 24px;
-                }
+
                 &::before{
                     content: '';
                     position: absolute;
+                    display: block;
                     bottom: 0;
-                    border-bottom: 1px solid $darkGrayishBlue;
+                    left: 0;
                     width: 100%;
+                    border-bottom: 1px solid $darkGrayishBlue;
                 }
             }
-            .grid{
+
+            .item{
                 display: grid;
-                grid-template-columns: repeat(7, 1fr);
-                gap: 17px;
-                margin: 24px;
-                .pic{
-                    grid-column-start: 1;
-                    grid-column-end: 2;
+                grid-template-columns: auto max-content repeat(1, 1fr);
+                grid-template-rows: 1fr 1fr;
+                gap: 16px;
+                padding: 24px;
+                .product-img img{
                     width: 50px;
-                    img{
-                        border-radius: 5px;
-                        width: 100%;
-                    }
+                    border-radius: 5px;
                 }
-                .price{
-                    grid-column-start: 2;
-                    grid-column-end: 7;
+                .product-info{
                     p{
-                        font-size: 14px;
                         color: $darkGrayishBlue;
+                        font-size: 13px;
+                        line-height: 1.6;
                         strong{
-                            color: $black;
+                            color: $veryDarkBlue;
                         }
                     }
                 }
-                .trash{
-                    grid-column-start: 7;
-                    grid-column-end: 8;
-                    margin-top: 18px;
-                    img{
-                        width: 15px;
-                    }
+                .product-delete{
+                    place-self: center;
                 }
+            }
+            .btn{
+                grid-column-start: 1;
+                grid-column-end: 4;
+                border: none;
+                background-color: $orange;
+                color: $white;
+                border-radius: 10px;
+                font-weight: 700;
             }
         }
 
-        .icon{  
-            cursor: pointer; 
-            position: relative;
-            img{
-                position: relative;
-                width: 21px;
-                height: 20px;
-            }
-            small{
-                position: absolute;
-                background-color: $orange;
-                padding: 1px 7px;
-                border-radius: 50%;
-                font-size: 7px;
-                font-weight: 700;
-                color: $white;
-                right: -8px;
-                top: -5px;
-                opacity: 0;
-            }
+        .avatar{
+            width: 2.5rem;
+            cursor: pointer;
             &:hover{
-                small{
-                    opacity: 1;
-                }
-                img{
-                    filter: brightness(0);
-                }
+                border: 2px solid $orange;
+                border-radius: 50%;
             }
         }
     }
+}
+
+
+
+
+/* ============================== MEDIA QUERIES ============================== */
+@media screen and (max-width: 1020px) {
+
 }

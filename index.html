@@ -18,74 +18,53 @@
 
 </head>
 <body>
+  
+  <div class="container">
+    <header>
+      <div class="hamburger-logo-group">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
 
-  <!-- NAVBAR -->
-  <nav class="nav">
-    <div class="container nav__container">
-
-      <ul class="nav__links">
-
-        <div class="nav__logo">
+      <nav class="menu">
+        <div class="logo">
           <img src="./images/logo.svg" alt="">
         </div>
+        <a href="">Collections</a>
+        <a href="">Men</a>
+        <a href="">Women</a>
+        <a href="">About</a>
+        <a href="">Contact</a>
+      </nav>
 
-        <li><a href="">Collections</a></li>
-        <li><a href="">Men</a></li>
-        <li><a href="">Women</a></li>
-        <li><a href="">About</a></li>
-        <li><a href="">Contact</a></li>
-
-      </ul>
-
-      <ul class="nav__profile">
-        <li class="icon">
+      <div class="cart-avatar-group">
+        <div class="btnCart">
           <img src="./images/icon-cart.svg" alt="">
-          <small>1</small>
-        </li>
-        <li class="avatar">
-          <img src="./images/image-avatar.png" alt="">
-        </li>
-        <ul class="showup">
-          <li class="title"><p>Cart</p></li>
-          <div class="grid">
-            <div class="pic"><img src="./images/image-product-1-thumbnail.jpg" alt=""></div>
-            <div class="price">
-              <p>Fall Limited Edition Sneakers</p>
-              <p>$125.00 x 3 <strong>$375.00</strong></p>
-            </div>
-            <div class="trash">
-              <img src="./images/icon-delete.svg" alt="">
+          <div class="btnCart__count">
+            <small>1</small>
+          </div>
+          <div class="hover-items">
+            <h5>Cart</h5>
+            <div class="item">
+              <div class="product-img">
+                <img src="./images/image-product-1-thumbnail.jpg" alt="">
+              </div>
+              <div class="product-info">
+                <p>Fall Limited Edition Sneakers</p>
+                <p>$125.00 x 3 <strong>$375.00</strong></p>
+              </div>
+              <div class="product-delete">
+                <img src="./images/icon-delete.svg" alt="">
+              </div>
+              <button class="btn">Checkout</button>
             </div>
           </div>
-        </ul>
-      </ul>
+        </div>
 
-      <button id="open__nav-btn"><i class="uil uil-bars"></i></button>
-      <button id="close__nav-btn"><i class="uil uil-multiply"></i></button>
-    </div>
-  </nav> 
-  <!-- END OF NAVBAR-->
-
-
-  <!--Sneaker Company
-
-  Fall Limited Edition Sneakers
-
-  These low-profile sneakers are your perfect casual wear companion. Featuring a 
-  durable rubber outer sole, they’ll withstand everything the weather can offer.
-
-  $125.00
-  50%
-  $250.00
-
-  0
-  Add to cart-->
-  
-  <!--
-    <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </div>
-  -->
+        <img class="avatar" src="./images/image-avatar.png" alt="">
+      </div>
+    </header>
+  </div>
 </body>
 </html>
