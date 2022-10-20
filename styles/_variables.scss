@@ -14,4 +14,18 @@ $black: hsl(0, 0%, 0%, 0.75);
 $longWidth: 77%; //1440 - 328 = 1112 ==> 77%
 $middleWidth: 88%;
 
+//base
+$base: 1;
 
+//Font-sizes
+$fontSize1: clamp(calc(var($base) * .8rem), 30vw + 1rem, 400px);
+$fontSize2: clamp(($base)rem, 30vw + 1rem, 400px);
+$fontSize3: clamp(calc(var($base) * 1.75rem), 30vw + 1rem, 400px);
+$fontSize4: clamp(calc(var($base) * 2.25rem), 30vw + 1rem, 400px);
+
+//Space sizing
+$sizer1: clamp(calc(var($base) * 1.26rem), 30vw, 400px);
+$sizer2: clamp(calc(var($base) * 1.875rem), 30vw, 400px);
+$sizer3: clamp(calc(var($base) * 2.25rem), 30vw, 400px);
+$sizer4: clamp(calc(var($base) * 2.5rem), 30vw, 400px);
+$sizer5: clamp(calc(var($base) * 2.8125rem), 30vw, 400px);

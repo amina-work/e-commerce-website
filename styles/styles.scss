@@ -17,175 +17,38 @@ body{
     overflow-x: hidden;
 }
 
-
-
-/* ============================== NAVBAR ============================== */
-header{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 2rem;
-    margin: auto; //centers header (?)
-    width: $longWidth;
-    position: relative;
-
-    &::before{
-        content: '';
-        position: absolute;
-        bottom: 0;
-        border-bottom: 1px solid $darkGrayishBlue;
-        width: 94%;
-    }
-
-    .logo{
-        margin-right: 22px;
-    }
-
-    button{
-        display: none;
-    }
-
-    .menu{
-        display: flex;
-        gap: 34px;
-
-        a{
-            text-decoration: none;
-            color: $darkGrayishBlue;
-            position: relative;
-
-            &::before{
-                content: '';
-                position: absolute;
-                display: block;
-                bottom: -2.5rem;
-                left: 0;
-                right: 0;
-                border-bottom: 4px solid $orange;
-                opacity: 0;
-                transition: opacity 400ms ease-in-out;
-            }
-            &:hover{
-                color: $veryDarkBlue;
-                &::before{
-                    opacity: 1;
-                }
-            }
-        }
-    }
-
-    .cart-avatar-group{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        gap: 2.2rem;
-
-        .btnCart{
-            cursor: pointer;
-            position: relative;
-            &:hover {
-                .hover-items{
-                    opacity: 1;
-                }
-
-                .btnCart__count{
-                    opacity: 1;
-                }
-            }
-            &__count{
-                position: absolute;
-                font-size: 8px;
-                font-weight: 700;
-                color: $white;
-                background-color: $orange;
-                padding: 2px 8px;
-                border-radius: 50%;
-                left: 12px;
-                top: -6px;
-                opacity: 0;
-            }
-        }
-
-        .hover-items{
-            position: absolute;
-            background-color: $white;
-            box-shadow: 1px 7px 7px rgba(0, 0, 0, 0.2);
-            border-radius: 5%;
-            top: 3rem;
-            right: -9.5rem;
-            opacity: 0;
-
-            h5{
-                color: $veryDarkBlue;
-                font-size: 14px;
-                padding: 24px;
-                position: relative;
-
-                &::before{
-                    content: '';
-                    position: absolute;
-                    display: block;
-                    bottom: 0;
-                    left: 0;
-                    width: 100%;
-                    border-bottom: 1px solid $darkGrayishBlue;
-                }
-            }
-
-            .item{
-                display: grid;
-                grid-template-columns: auto max-content repeat(1, 1fr);
-                grid-template-rows: 1fr 1fr;
-                gap: 16px;
-                padding: 24px;
-                .product-img img{
-                    width: 50px;
-                    border-radius: 5px;
-                }
-                .product-info{
-                    p{
-                        color: $darkGrayishBlue;
-                        font-size: 13px;
-                        line-height: 1.6;
-                        strong{
-                            color: $veryDarkBlue;
-                        }
-                    }
-                }
-                .product-delete{
-                    place-self: center;
-                }
-            }
-            .btn{
-                grid-column-start: 1;
-                grid-column-end: 4;
-                border: none;
-                background-color: $orange;
-                color: $white;
-                border-radius: 10px;
-                font-weight: 700;
-            }
-        }
-
-        .avatar{
-            width: 2.5rem;
-            cursor: pointer;
-            &:hover{
-                border: 2px solid $orange;
-                border-radius: 50%;
-            }
-        }
-    }
+/* ============================== SHARED ==============================*/
+.fs1{
+    font-size: $fontSize1;
 }
+
+.fs2{
+    font-size: $fontSize2;
+}
+.fs3{
+    font-size: $fontSize3;
+}
+.fs4{
+    font-size: $fontSize4;
+}
+
+.size1{
+    font-size: $sizer1;
+}
+.size2{
+    font-size: $sizer2;
+}
+.size3{
+    font-size: $sizer3;
+}
+.size4{
+    font-size: $sizer4;
+}
+.size5{
+    font-size: $sizer5;
+}
+/* ============================== NAVBAR ============================== */
 
 
 
 /* ============================== MEDIA QUERIES ============================== */
-@media screen and (max-width: 1020px) {
-    .menu a{
-        display: none;
-    }
-
-}
