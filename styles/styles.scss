@@ -1,6 +1,5 @@
 @import "variables"; //variables file always upfront
 
-//1440 width x 900 height
 
 /* ============================== GENERAL ============================== */
 *{
@@ -46,6 +45,67 @@ body{
 }
 .size5{
     font-size: $sizer5;
+}
+
+.bg-bgk{
+    background-color: $bkg;
+}
+.bg-accent{
+    background-color: $orange;
+}
+.bg-pale{
+    background-color: $paleOrange;
+}
+.bg-text{
+    background-color: $text;
+}
+.bg-alt-bgk{
+    background-color: $veryDarkBlue;
+}
+.bg-alt-bgk1{
+    background-color: $darkGrayishBlue;
+}
+.bg-alt-bgk2{
+    background-color: $grayishBlue;
+}
+.bg-alt-bgk3{
+    background-color: $lightGrayishBlue;
+}
+
+//Text related
+.bgk{
+    color: $bkg;
+}
+.accent{
+    color: $orange;
+}
+.pale{
+    color: $paleOrange;
+}
+.text{
+    color: $text;
+}
+.alt-bgk{
+    color: $veryDarkBlue;
+}
+.alt-bgk1{
+    color: $darkGrayishBlue;
+}
+.alt-bgk2{
+    color: $grayishBlue;
+}
+.alt-bgk3{
+    color: $lightGrayishBlue;
+}
+.uppercase{
+    text-transform: uppercase;
+}
+
+.grid{
+    display: grid;
+}
+.flex{
+    display: flex;
 }
 /* ============================== NAVBAR ============================== */
 

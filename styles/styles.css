@@ -13,153 +13,118 @@ body {
   overflow-x: hidden;
 }
 
-/* ============================== NAVBAR ============================== */
-header {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  padding: 2rem;
-  margin: auto;
-  width: 77%;
-  position: relative;
-}
-header::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  border-bottom: 1px solid hsl(219deg, 9%, 45%);
-  width: 94%;
-}
-header .logo {
-  margin-right: 22px;
-}
-header button {
-  display: none;
-}
-header .menu {
-  display: flex;
-  gap: 34px;
-}
-header .menu a {
-  text-decoration: none;
-  color: hsl(219deg, 9%, 45%);
-  position: relative;
-}
-header .menu a::before {
-  content: "";
-  position: absolute;
-  display: block;
-  bottom: -2.5rem;
-  left: 0;
-  right: 0;
-  border-bottom: 4px solid hsl(26deg, 100%, 55%);
-  opacity: 0;
-  transition: opacity 400ms ease-in-out;
-}
-header .menu a:hover {
-  color: hsl(220deg, 13%, 13%);
-}
-header .menu a:hover::before {
-  opacity: 1;
-}
-header .cart-avatar-group {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2.2rem;
-}
-header .cart-avatar-group .btnCart {
-  cursor: pointer;
-  position: relative;
-}
-header .cart-avatar-group .btnCart:hover .hover-items {
-  opacity: 1;
-}
-header .cart-avatar-group .btnCart:hover .btnCart__count {
-  opacity: 1;
-}
-header .cart-avatar-group .btnCart__count {
-  position: absolute;
-  font-size: 8px;
-  font-weight: 700;
-  color: hsl(0deg, 0%, 100%);
-  background-color: hsl(26deg, 100%, 55%);
-  padding: 2px 8px;
-  border-radius: 50%;
-  left: 12px;
-  top: -6px;
-  opacity: 0;
-}
-header .cart-avatar-group .hover-items {
-  position: absolute;
-  background-color: hsl(0deg, 0%, 100%);
-  box-shadow: 1px 7px 7px rgba(0, 0, 0, 0.2);
-  border-radius: 5%;
-  top: 3rem;
-  right: -9.5rem;
-  opacity: 0;
-}
-header .cart-avatar-group .hover-items h5 {
-  color: hsl(220deg, 13%, 13%);
-  font-size: 14px;
-  padding: 24px;
-  position: relative;
-}
-header .cart-avatar-group .hover-items h5::before {
-  content: "";
-  position: absolute;
-  display: block;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  border-bottom: 1px solid hsl(219deg, 9%, 45%);
-}
-header .cart-avatar-group .hover-items .item {
-  display: grid;
-  grid-template-columns: auto -webkit-max-content repeat(1, 1fr);
-  grid-template-columns: auto max-content repeat(1, 1fr);
-  grid-template-rows: 1fr 1fr;
-  gap: 16px;
-  padding: 24px;
-}
-header .cart-avatar-group .hover-items .item .product-img img {
-  width: 50px;
-  border-radius: 5px;
-}
-header .cart-avatar-group .hover-items .item .product-info p {
-  color: hsl(219deg, 9%, 45%);
-  font-size: 13px;
-  line-height: 1.6;
-}
-header .cart-avatar-group .hover-items .item .product-info p strong {
-  color: hsl(220deg, 13%, 13%);
-}
-header .cart-avatar-group .hover-items .item .product-delete {
-  place-self: center;
-}
-header .cart-avatar-group .hover-items .btn {
-  grid-column-start: 1;
-  grid-column-end: 4;
-  border: none;
-  background-color: hsl(26deg, 100%, 55%);
-  color: hsl(0deg, 0%, 100%);
-  border-radius: 10px;
-  font-weight: 700;
-}
-header .cart-avatar-group .avatar {
-  width: 2.5rem;
-  cursor: pointer;
-}
-header .cart-avatar-group .avatar:hover {
-  border: 2px solid hsl(26deg, 100%, 55%);
-  border-radius: 50%;
+/* ============================== SHARED ==============================*/
+.fs1 {
+  font-size: clamp(var(1) * 0.8rem, 30vw + 1rem, 400px);
 }
 
-/* ============================== MEDIA QUERIES ============================== */
-@media screen and (max-width: 1020px) {
-  .menu a {
-    display: none;
-  }
-}/*# sourceMappingURL=styles.css.map */
+.fs2 {
+  font-size: clamp(1rem, 30vw + 1rem, 400px);
+}
+
+.fs3 {
+  font-size: clamp(var(1) * 1.75rem, 30vw + 1rem, 400px);
+}
+
+.fs4 {
+  font-size: clamp(var(1) * 2.25rem, 30vw + 1rem, 400px);
+}
+
+.size1 {
+  font-size: clamp(var(1) * 1.26rem, 30vw, 400px);
+}
+
+.size2 {
+  font-size: clamp(var(1) * 1.875rem, 30vw, 400px);
+}
+
+.size3 {
+  font-size: clamp(var(1) * 2.25rem, 30vw, 400px);
+}
+
+.size4 {
+  font-size: clamp(var(1) * 2.5rem, 30vw, 400px);
+}
+
+.size5 {
+  font-size: clamp(var(1) * 2.8125rem, 30vw, 400px);
+}
+
+.bg-bgk {
+  background-color: hsl(25deg, 100%, 99%);
+}
+
+.bg-accent {
+  background-color: hsl(26deg, 100%, 55%);
+}
+
+.bg-pale {
+  background-color: hsl(25deg, 100%, 94%);
+}
+
+.bg-text {
+  background-color: hsl(25deg, 100%, 3%);
+}
+
+.bg-alt-bgk {
+  background-color: hsl(220deg, 13%, 13%);
+}
+
+.bg-alt-bgk1 {
+  background-color: hsl(219deg, 9%, 45%);
+}
+
+.bg-alt-bgk2 {
+  background-color: hsl(220deg, 14%, 75%);
+}
+
+.bg-alt-bgk3 {
+  background-color: hsl(223deg, 64%, 98%);
+}
+
+.bgk {
+  color: hsl(25deg, 100%, 99%);
+}
+
+.accent {
+  color: hsl(26deg, 100%, 55%);
+}
+
+.pale {
+  color: hsl(25deg, 100%, 94%);
+}
+
+.text {
+  color: hsl(25deg, 100%, 3%);
+}
+
+.alt-bgk {
+  color: hsl(220deg, 13%, 13%);
+}
+
+.alt-bgk1 {
+  color: hsl(219deg, 9%, 45%);
+}
+
+.alt-bgk2 {
+  color: hsl(220deg, 14%, 75%);
+}
+
+.alt-bgk3 {
+  color: hsl(223deg, 64%, 98%);
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.grid {
+  display: grid;
+}
+
+.flex {
+  display: flex;
+}
+
+/* ============================== NAVBAR ============================== */
+/* ============================== MEDIA QUERIES ============================== *//*# sourceMappingURL=styles.css.map */
